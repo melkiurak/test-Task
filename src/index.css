@@ -135,4 +135,26 @@ h4 {
   width: 100%;
   margin: 0 auto;
   padding: 32px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.timer__prom {
+  width: 178px;
+  background-color: #dd2a00;
+  border-radius: 16px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  font-family: "Robot Flex", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+.timer-icon {
+  width: 24px;
+  height: 24px;
 }
