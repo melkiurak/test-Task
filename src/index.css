@@ -125,6 +125,11 @@ h1 {
   font-size: 36px;
   font-weight: 600;
 }
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
 h4 {
   font-family: "Montserrat", sans-serif;
   font-size: 22px;
@@ -157,4 +162,57 @@ h4 {
 .timer-icon {
   width: 24px;
   height: 24px;
+}
+.promo__section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.promo__title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.promo__title-icon {
+  display: none;
+  width: 24px;
+  height: 24px;
+}
+.promo__list {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding-left: 17px;
+}
+.promo__item {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 18px;
+}
+.promo__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url("./assets/icons/list__symbol.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1024px) {
+  .promo__title-icon {
+    display: block;
+  }
+  .main__container {
+    padding: 32px 25px;
+  }
+}
+@media (max-width: 768px) {
+  .promo__title-icon {
+    display: none;
+  }
 }
