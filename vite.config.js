@@ -7,6 +7,7 @@ export default defineConfig({
     alias: {
       '@styles': new URL('./src/styles', import.meta.url).pathname,
       '@icons': new URL('./src/assets/icons', import.meta.url).pathname,
+      '@img': new URL('./src/assets/img', import.meta.url).pathname,
     }
   }
 })
