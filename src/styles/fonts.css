@@ -1,0 +1,21 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Flex:regular);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+@font-face {
+  font-family: "Helvetica Neue Cyr";
+  src: url("../assets/fonts/HelveticaNeueCyr\ Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Helvetica Neue Cyr";
+  src: url("../assets/fonts/HelveticaNeueCyr\ Roman.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Helvetica Neue Cyr";
+  src: url("../assets/fonts/helveticaneuecyr_black.otf") format("opentype");
+  font-weight: 900;
+}
