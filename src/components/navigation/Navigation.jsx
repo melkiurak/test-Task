@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { TbClockHour10Filled } from "react-icons/tb";
 import { MdOutlineContentCopy } from 'react-icons/md';
 export const Navigation = () => {
-        return <div className="navigation">
+        return <div className="navigation main__container" >
         <div className="navigation__tabs">  
             <button className="navigation__tab-button navigation__tab-button-active">Про акцію</button>
             <button className="navigation__tab-button">Офіційні правила</button>

@@ -130,10 +130,19 @@ h2 {
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
 }
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
 h4 {
   font-family: "Montserrat", sans-serif;
   font-size: 22px;
   font-weight: 600;
+}
+
+body {
+  background-color: #f2f2f2;
 }
 .main__container {
   max-width: 1615px;
@@ -203,6 +212,11 @@ h4 {
   background-size: contain;
   background-repeat: no-repeat;
 }
+.discount {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
 @media (max-width: 1024px) {
   .promo__title-icon {
     display: block;
@@ -214,5 +228,10 @@ h4 {
 @media (max-width: 768px) {
   .promo__title-icon {
     display: none;
+  }
+  .discount {
+    h2 {
+      font-size: 20px;
+    }
   }
 }

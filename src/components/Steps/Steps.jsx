@@ -6,7 +6,7 @@ import { CiCircleInfo } from "react-icons/ci";
 
 
 export const Steps = () => {
-    return <div className="steps">
+    return <div className="steps main__container">
         <div className="steps__block">
             <div className="promo__section">
                 <div className="promo__title">

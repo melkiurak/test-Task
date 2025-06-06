@@ -4,14 +4,20 @@ import { Navigation } from "./components/navigation/Navigation"
 import { BsStars } from "react-icons/bs";
 import diamond from '@icons/icon-symbol-Diamods.png'
 import { Steps } from "./components/Steps/Steps";
+import discountImg from '@img/discount__Img.png'
+import { DicsountProducts } from "./components/dicsountProducts/dicsountProducts";
+import { Categories } from "./components/categories/categories";
+import { MoreAction } from "./components/moreAction/moreAction";
+
+
 function App() {
   return (
     <div className="wrapper">
       <Header/>
-      <main className="main__container">
+      <main>
         <Banner/>
         <Navigation/>
-        <div className="promo__section">
+        <div className="promo__section main__container">
           <div className="promo__title">
             <BsStars className="promo__title-icon"/>
             <h2>Правила акції</h2>
@@ -25,7 +31,7 @@ function App() {
             </ul>
           </nav>
         </div>
-        <div className="promo__section">
+        <div className="promo__section main__container">
           <div className="promo__title">
             <img src={diamond} className="promo__title-icon" alt="" />
             <h2>Обмеження</h2>
@@ -38,6 +44,12 @@ function App() {
           </nav>
         </div>
         <Steps/>
+        <div className="discount main__container">
+          <h2>Приклад розрахунку знижки</h2>
+          <img src={discountImg} alt="" />
+        </div>
+        <Categories/>
+        <MoreAction/>
       </main>
     </div>
   )
