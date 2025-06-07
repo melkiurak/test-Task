@@ -1,5 +1,6 @@
 .discount__products-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .discount__products-button {
@@ -146,10 +147,28 @@
 }
 .discount__product-info-extra-indicator {
 }
+.discount__products-button-text::before {
+  content: attr(data-full);
+}
 @media (max-width: 1440px) {
   .discount__product-image-wrapper,
   .discount__product-info,
   .discount__product-info-extra {
     flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .discount__products-header {
+    h2 {
+      font-size: 15px;
+    }
+  }
+  .discount__product-info-extra-button {
+    span {
+      padding: 12px;
+    }
+  }
+  .discount__products-button-text:before {
+    content: attr(data-short);
   }
 }

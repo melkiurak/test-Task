@@ -8,6 +8,7 @@ import discountImg from '@img/discount__Img.png'
 import { Categories } from "./components/categories/categories";
 import { MoreAction } from "./components/moreAction/moreAction";
 import { DiscountProducts } from "./components/dicsountProducts/dicsountProducts";
+import { Footer } from "./components/footer/Footer";
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         <Categories/>
         <MoreAction/>
       </main>
+      <Footer/>
     </div>
   )
 }

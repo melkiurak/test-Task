@@ -23,7 +23,6 @@ a:hover {
 
 aside,
 nav,
-footer,
 header,
 section,
 main {
@@ -248,9 +247,7 @@ body {
   .main__container {
     padding: 32px 20px;
   }
-  .discount {
-    h2 {
-      font-size: 20px;
-    }
+  h2 {
+    font-size: 22px;
   }
 }

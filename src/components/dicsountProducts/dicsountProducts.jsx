@@ -59,9 +59,9 @@ export const DiscountProducts = () => {
     return (
         <div className="discount__products main__container">
             <div className="discount__products-header">
-                <h2 className="discount__products-title">Вироби, що беруть участь в акції</h2>
+                <h2>Вироби, що беруть участь в акції</h2>
                 <button className="discount__products-button">
-                    <span>Переглянути всі</span>
+                    <span className="discount__products-button-text" data-full="Переглянути всі" data-short="Всі"></span>
                     <TbArrowNarrowRight className="discount__products-icon" />
                 </button>
             </div>
@@ -72,7 +72,8 @@ export const DiscountProducts = () => {
                     slidesPerView={2}
                     breakpoints={{
                         320: { slidesPerView: 1.5 },
-                        430: { slidesPerView: 2.7, spaceBetween: 8 },
+                        430: { slidesPerView: 2.2, spaceBetween: 8 },
+                        768: { slidesPerView: 2.7, spaceBetween: 8 },
                         1024: { slidesPerView: 4.5, spaceBetween: 16 },
                         1440: { slidesPerView: 5, spaceBetween: 16 },
                     }}
