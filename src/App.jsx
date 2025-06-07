@@ -10,10 +10,17 @@ import { MoreAction } from "./components/moreAction/moreAction";
 import { DiscountProducts } from "./components/dicsountProducts/dicsountProducts";
 import { Footer } from "./components/footer/Footer";
 
+import { MdArrowForwardIos } from "react-icons/md";
 
 function App() {
   return (
     <div className="wrapper">
+      <div className="banner__top">
+        <div className=" banner__top-container">
+          <p>⭐ Знижка -53% на пару обручок тут</p>
+          <button><MdArrowForwardIos/></button>
+        </div>
+      </div>
       <Header/>
       <main>
         <Banner/>
