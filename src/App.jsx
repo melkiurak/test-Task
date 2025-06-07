@@ -5,9 +5,9 @@ import { BsStars } from "react-icons/bs";
 import diamond from '@icons/icon-symbol-Diamods.png'
 import { Steps } from "./components/Steps/Steps";
 import discountImg from '@img/discount__Img.png'
-import { DicsountProducts } from "./components/dicsountProducts/dicsountProducts";
 import { Categories } from "./components/categories/categories";
 import { MoreAction } from "./components/moreAction/moreAction";
+import { DiscountProducts } from "./components/dicsountProducts/dicsountProducts";
 
 
 function App() {
@@ -48,6 +48,7 @@ function App() {
           <h2>Приклад розрахунку знижки</h2>
           <img src={discountImg} alt="" />
         </div>
+        <DiscountProducts/>
         <Categories/>
         <MoreAction/>
       </main>

@@ -5,7 +5,7 @@ import categories4 from '@img/categories4.png'
 import categories5 from '@img/categories5.png'
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { CustomSwiper } from '../Slider/Swiper';
+import { CustomSwiper } from '../Swiper/Swiper'
 
 const slidesData = [
   { id: 1, img: categories1, text: "Сережки" },
@@ -17,6 +17,6 @@ const slidesData = [
 
 export const Categories = () => {
     return <div className='categories'>
-      <CustomSwiper slides={slidesData} title="Більше виробів" />
+      <CustomSwiper slides={slidesData} title="Більше виробів" prevBtnClass="categories__swiper-prev" nextBtnClass="categories__swiper-next" />
     </div>
 }

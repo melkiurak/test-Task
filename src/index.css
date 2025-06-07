@@ -154,7 +154,6 @@ body {
   gap: 32px;
 }
 .timer__prom {
-  width: 178px;
   background-color: #dd2a00;
   border-radius: 16px;
   padding: 8px 16px;
@@ -166,7 +165,6 @@ body {
   font-family: "Robot Flex", sans-serif;
   font-weight: 500;
   font-size: 14px;
-  margin-bottom: 32px;
 }
 .timer-icon {
   width: 24px;
@@ -217,6 +215,21 @@ body {
   flex-direction: column;
   gap: 40px;
 }
+.swiper__button-prev,
+.swiper__button-next {
+  background-color: white;
+  color: #dd2a00;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+}
+.swiper__button-next-icons,
+.swiper__button-prev-icons {
+  width: 24px;
+  height: 24px;
+}
 @media (max-width: 1024px) {
   .promo__title-icon {
     display: block;
@@ -224,10 +237,16 @@ body {
   .main__container {
     padding: 32px 25px;
   }
+  .timer__prom {
+    padding: 8px 10px;
+  }
 }
 @media (max-width: 768px) {
   .promo__title-icon {
     display: none;
+  }
+  .main__container {
+    padding: 32px 20px;
   }
   .discount {
     h2 {
