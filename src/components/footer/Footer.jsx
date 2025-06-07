@@ -2,6 +2,7 @@ import { FiPhone, FiHome } from "react-icons/fi";
 import { FaRegHeart } from "react-icons/fa";
 import { LuUserRound } from "react-icons/lu";
 import { TbShoppingBag } from "react-icons/tb";
+import { IoIosArrowDown } from "react-icons/io";
 
 import { MdOutlineMailOutline } from "react-icons/md";
 import '@styles/footer.css'
@@ -12,8 +13,25 @@ import youtubeIcon from '@icons/icon-youtube.png'
 import TikTokIcon from '@icons/icon-tik-tok.png'
 import scrapIcon from '@icons/icon-scrap.png'
 import { AiOutlineProduct } from "react-icons/ai";
+import { useState } from "react";
 
 export const Footer = () => {
+    const [listOpen, setListOpen] = useState({
+        about: false,
+        safety: false,
+        helpService: false,
+        proposal: false,
+        interesting: false,
+        catalog: false,
+    });
+    const handelOpenList = (key) => {
+        setListOpen(prev => {
+            const newState = { ...prev };
+            newState[key] = !prev[key];
+            return newState;
+        });
+    }
+
     return <footer className="footer">
         <div className="main__container footer__container">
             <div className="footer__container-menu">
@@ -60,15 +78,21 @@ export const Footer = () => {
                 </div>
                 <div className="footer__links">
                     <nav className="footer__nav">
-                        <ul className="footer__list">
-                            <li className="footer__list-title">О нас</li>
+                        <button className="footer__list-title" onClick={() => handelOpenList('about')}>
+                            <span>О нас</span>
+                            <IoIosArrowDown className="footer__list-title-icon"/>
+                        </button>
+                        <ul className={`footer__list ${listOpen.about ? 'footer__list-open' : 'footer__list-close'}` }>
                             <li><a href="">О Zlato.ua</a></li>
                             <li><a href="">Отзывы</a></li>
                             <li><a href="">Контакты</a></li>
                             <li><a href="">Сотрудничество</a></li>
                         </ul>
-                        <ul className="footer__list">
-                            <li className="footer__list-title">Безопасность</li>
+                        <button className="footer__list-title" onClick={() => handelOpenList('safety')}>
+                            <span>Безопасность</span>
+                            <IoIosArrowDown className="footer__list-title-icon"/>
+                        </button>
+                        <ul className={`footer__list ${listOpen.safety ? 'footer__list-open' : 'footer__list-close'}` }>
                             <li><a href="">Публичная оферта</a></li>
                             <li><a href="">Пользовательское соглашение</a></li>
                             <li><a href="">Политика конфиденциальности</a></li>
@@ -80,17 +104,20 @@ export const Footer = () => {
                 </div>           
                 <div className="footer__links">
                     <nav className="footer__nav">
-                        <ul className="footer__list">
-                        <li className="footer__list-title">Помощь и сервис</li>
-                        <li><a href="">Доставка и оплата</a></li>
-                        <li><a href="">Точки выдачи</a></li>
-                        <li><a href="">Кредит и оплата частями</a></li>
-                        <li><a href="">Обмен украшений</a></li>
-                        <li><a href="">Гарантия</a></li>
-                        <li><a href="">Упаковка</a></li>
-                        <li><a href="">Уход за украшениями</a></li>
-                        <li><a href="">Помощь FAQ</a></li>
-                        <li><a href="">Карта сайта</a></li>
+                        <button className="footer__list-title" onClick={() => handelOpenList('helpService')}>
+                            <span>Помощь и сервис</span>
+                            <IoIosArrowDown className="footer__list-title-icon"/>
+                        </button>
+                        <ul className={`footer__list ${listOpen.helpService ? 'footer__list-open' : 'footer__list-close'}` }>
+                            <li><a href="">Доставка и оплата</a></li>
+                            <li><a href="">Точки выдачи</a></li>
+                            <li><a href="">Кредит и оплата частями</a></li>
+                            <li><a href="">Обмен украшений</a></li>
+                            <li><a href="">Гарантия</a></li>
+                            <li><a href="">Упаковка</a></li>
+                            <li><a href="">Уход за украшениями</a></li>
+                            <li><a href="">Помощь FAQ</a></li>
+                            <li><a href="">Карта сайта</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -99,17 +126,23 @@ export const Footer = () => {
                 </div>            
                 <div className="footer__links">
                     <nav className="footer__nav">
-                        <ul className="footer__list">
-                        <li className="footer__list-title">Предложение</li>
-                        <li><a href="">Скидка именникам</a></li>
-                        <li><a href="">Подарочные сертификаты</a></li>
-                        <li><a href="">Акции</a></li>
+                        <button className="footer__list-title" onClick={() => handelOpenList('proposal')}>
+                            <span>Предложение</span>
+                            <IoIosArrowDown className="footer__list-title-icon"/>
+                        </button>
+                        <ul className={`footer__list ${listOpen.proposal ? 'footer__list-open' : 'footer__list-close'}` }>
+                            <li><a href="">Скидка именникам</a></li>
+                            <li><a href="">Подарочные сертификаты</a></li>
+                            <li><a href="">Акции</a></li>
                         </ul>
-                        <ul className="footer__list">
-                        <li className="footer__list-title">Интересное</li>
-                        <li><a href="">Новости</a></li>
-                        <li><a href="">Ювелирный блог</a></li>
-                        <li><a href="">Ювелирный гороскоп</a></li>
+                        <button className="footer__list-title" onClick={() => handelOpenList('interesting')}>
+                            <span>Интересное</span>
+                            <IoIosArrowDown className="footer__list-title-icon"/>
+                        </button>
+                        <ul className={`footer__list ${listOpen.interesting ? 'footer__list-open' : 'footer__list-close'}` }>
+                            <li><a href="">Новости</a></li>
+                            <li><a href="">Ювелирный блог</a></li>
+                            <li><a href="">Ювелирный гороскоп</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -118,17 +151,20 @@ export const Footer = () => {
                 </div>            
                 <div className="footer__links">
                     <nav className="footer__nav">
-                        <ul className="footer__list">
-                        <li className="footer__list-title">Каталог</li>
-                        <li><a href="">Все украшения</a></li>
-                        <li><a href="">Бренды</a></li>
-                        <li><a href="">Золото</a></li>
-                        <li><a href="">Серебро</a></li>
-                        <li><a href="">Брилианты</a></li>
-                        <li><a href="">Женщинам</a></li>
-                        <li><a href="">Мужчинам</a></li>
-                        <li><a href="">Помощь FAQ</a></li>
-                        <li><a href="">Детям</a></li>
+                         <button className="footer__list-title" onClick={() => handelOpenList('catalog')}>
+                            <span>Каталог</span>
+                            <IoIosArrowDown className="footer__list-title-icon"/>
+                        </button>
+                        <ul className={`footer__list ${listOpen.catalog ? 'footer__list-open' : 'footer__list-close'}` } >
+                            <li><a href="">Все украшения</a></li>
+                            <li><a href="">Бренды</a></li>
+                            <li><a href="">Золото</a></li>
+                            <li><a href="">Серебро</a></li>
+                            <li><a href="">Брилианты</a></li>
+                            <li><a href="">Женщинам</a></li>
+                            <li><a href="">Мужчинам</a></li>
+                            <li><a href="">Помощь FAQ</a></li>
+                            <li><a href="">Детям</a></li>
                         </ul>
                     </nav>
                 </div>
